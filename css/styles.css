@@ -28,6 +28,12 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Gilroy-Semibol';
+    src: url('../fonts/Gilroy-Semibold.ttf') format('truetype');
+    font-style: normal;
+}
+
 h1, h2, h3, h4, h5, p, span, a, button, input, label {
     margin: 0;
     font-family: 'Gilroy', sans-serif;
@@ -36,6 +42,7 @@ h1, h2, h3, h4, h5, p, span, a, button, input, label {
 h1 {
     font-size: clamp(30px, 5vw, 40px);
     font-weight: 600;
+    font-family: 'Gilroy-Semibol', sans-serif;
     color: #333333;
 }
 
