@@ -1,0 +1,297 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Light.otf') format('opentype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-ExtraBold';
+    src: url('../fonts/Gilroy-ExtraBold.otf') format('opentype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-Regular';
+    src: url('../fonts/Gilroy-Regular.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('../fonts/Gilroy-Bold.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-Medium';
+    src: url('../fonts/Gilroy-Medium.ttf') format('truetype');
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, p, span, a, button, input, label {
+    margin: 0;
+    font-family: 'Gilroy', sans-serif;
+}
+
+h1 {
+    font-size: clamp(30px, 5vw, 40px);
+    font-weight: 600;
+    color: #333333;
+}
+
+h2 {
+    font-size: clamp(28px, 3vw, 34px);
+}
+
+h3 {
+    font-size: clamp(24px, 3.5vw, 32px);
+}
+
+h4 {
+    font-size: clamp(20px, 3vw, 30px);
+}
+
+h5, p, a, button, input, span, label, strong {
+    font-size: 24px;
+    font-family: 'Gilroy-Regular', sans-serif;
+    color: #555555;
+}
+
+p {
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: auto;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    background: linear-gradient(to bottom, white 50%, #EEF7FF 50%);
+}
+
+section {
+    padding: 0 10%;
+}
+
+.why-me {
+    padding-top: 120px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 5%;
+}
+
+.why-me__container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.why-me__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.why-me__pjob-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding-top: 5%;
+}
+
+.why-me__pjob-list-item, .why-me__pjob-list-item-content {
+    display: flex;
+    gap: 10px;
+}
+.why-me__pjob-list-item-number, .why-me__pjob-list-item-title {
+    font-size: clamp(16px, 2vw, 20px);
+    font-family: 'Gilroy-Bold', sans-serif;
+    text-transform: uppercase;
+}
+
+.why-me__pjob-list-item-title {
+    color: #555555;
+}
+
+.why-me__pjob-list-item-number {
+    color: #DC0306;
+}
+
+.why-me__pjob-list-item-content p {
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+
+.why-me__pjob-list-item-content {
+    gap: 15px;
+    flex-direction: column;
+}
+
+.why-me__slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: min-content;
+}
+
+
+.why-me__slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.why-me__slide {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+}
+
+.why-me__slider-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 0 8% 8% 8%;
+    z-index: 10;
+}
+
+.why-me__signup-button {
+    background-color: #DC0306;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    height: 65px;
+    font-size: clamp(14px, 2vw, 18px);
+    font-family: 'Gilroy-Bold', sans-serif;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-me__nav-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.why-me__nav-button {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    cursor: pointer;
+}
+
+.why-me__button-icon {
+    height: 24px;
+}
+
+@media screen and (max-width: 1200px) {
+    section {
+        padding: 0 40px 10% 40px;
+    }
+
+    main {
+        background: linear-gradient(to bottom, white 33%, #EEF7FF 33%);
+    }
+
+    .why-me {
+        padding-top: 120px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5%;
+        width: 100%;
+    }
+
+    .why-me__slider {
+        position: relative;
+        min-width: 100%;
+        overflow: hidden;
+        height: 100%;
+        order: 1;
+    }
+
+    .why-me__slide {
+        min-width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .why-me__slide img {
+        min-width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .why-me__pjob-list {
+        background-color: #EEF7FF;
+        margin: 0 -40px;
+        padding: 30px 40px 0 40px;
+    }
+
+    h5, p, a, button, span {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        background: linear-gradient(to bottom, white 35%, #EEF7FF 35%);
+    }
+
+    section {
+        padding: 0 15px 10% 15px;
+    }
+
+    .why-me__pjob-list {
+        background-color: #EEF7FF;
+        margin: 0 -15px;
+        padding: 30px 15px 0 15px;
+    }
+
+    .why-me {
+        padding-top: 120px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5%;
+    }
+
+    .why-me__pjob-list {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    h5, p, a, button, span {
+        font-size: 16px;
+    }
+
+    .why-me__button-icon {
+        height: 16px;
+    }
+}
+
+
+@media screen and (max-width: 350px) {
+    main {
+        background: linear-gradient(to bottom, white 40%, #EEF7FF 40%);
+    }
+}
+
